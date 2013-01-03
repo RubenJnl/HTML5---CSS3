@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<meta charset=utf-8>
+
+<title> CSS3 - flex-box </title>
+
+<link rel="stylesheet" href="../reset.css">
+<link rel="stylesheet" href="../style.css">
+
+<style type="text/css">
+#box{
+	display:-moz-box; 
+	width:200px;
+	border:1px solid black;
+}
+#p1{
+	box-flex:2.0; 
+	-o-box-flex:2.0; 
+	-moz-box-flex:2.0; 
+	-webkit-box-flex:2.0; 
+	border:1px solid red;
+}
+#p2{
+	box-flex:5.0; 
+	-o-box-flex:5.0; 
+	-moz-box-flex:5.0; 
+	-webkit-box-flex:5.0; 
+	border:1px solid blue;
+}
+#p3{
+	box-flex:1.0; 
+	-o-box-flex:1.0; 
+	-webkit-box-flex:1.0; 
+	-moz-box-flex:1.0; 
+	border:1px solid purple;
+}
+#reversebox{
+	display:-moz-box; 
+	box-direction:reverse;
+	-o-box-direction:reverse;
+	-moz-box-direction:reverse;
+	-webkit-box-direction:reverse;
+	width:200px;
+	border:1px solid black;
+}
+#r1{
+	box-flex:2.0; 
+	-webkit-box-flex:2.0; 
+	-o-box-flex:2.0; 
+	-moz-box-flex:2.0; 
+	border:1px solid red;
+}
+#r2{
+	box-flex:5.0; 
+	-webkit-box-flex:5.0; 
+	-o-box-flex:5.0; 
+	-moz-box-flex:5.0; 
+	border:1px solid blue;
+}
+#r3{
+	box-flex:1.0; 
+	-moz-box-flex:1.0; 
+	-o-box-flex:1.0; 
+	-webkit-box-flex:1.0; 
+	border:1px solid purple;
+}
+.orderbox{
+	display:-moz-box;
+	border:1px solid black;
+}
+.ord1{
+	margin:5px;
+	display:-moz-box;
+	box-ordinal-group:1;
+	-moz-box-ordinal-group:1;
+	-o-box-ordinal-group:1;
+	-webkit-box-ordinal-group:1;
+	width: 150px;
+	border:1px solid purple;
+}
+.ord2{
+	margin:5px;
+	display:-moz-box;
+	box-ordinal-group:2; 
+	-o-box-ordinal-group:2; 
+	-moz-box-ordinal-group:2; 
+	-webkit-box-ordinal-group:2; 
+	width: 150px;
+	border:1px solid purple;
+}
+#align{
+	width: 600px;
+	height: 100px;
+	border: 1px dotted purple;
+	display:-moz-box;
+	box-orient:horizontal;
+	-o-box-orient:horizontal;
+	-moz-box-orient:horizontal;
+	-webkit-box-orient:horizontal;
+	box-pack:center;
+	-o-box-pack:center;
+	-moz-box-pack:center;
+	-webkit-box-pack:center;
+	box-align:center;
+	-o-box-align:center;
+	-moz-box-align:center;
+	-webkit-box-align:center;
+}
+#orient{
+	width: 300px;
+	height: 200px;
+	display:-moz-box;
+	box-orient:horizontal;
+	-o-box-orient:horizontal;
+	-moz-box-orient:horizontal;
+	-webkit-box-orient:horizontal;
+}
+#pack{
+	width: 500px;
+	height: 200px;
+	border: 1px dotted purple;
+	display:-moz-box;
+	box-orient:horizontal;
+	-o-box-orient:horizontal;
+	-moz-box-orient:horizontal;
+	-webkit-box-orient:horizontal;
+	box-pack:end; /* start|end|center|justify */
+	-o-box-pack:end; /* start|end|center|justify */
+	-moz-box-pack:end; /* start|end|center|justify */
+	-webkit-box-pack:end; /* start|end|center|justify */
+	box-align:center;
+	-o-box-align:center;
+	-moz-box-align:center;
+	-webkit-box-align:center;
+}
+</style>
+
+<div>
+	<h1>CSS3 - flex-box </h1>
+	<br />
+	<p> flexible box 
+	<div id="box">
+		<p id="p1">Hello</p>
+		<p id="p2">World</p>
+		<p id="p3">!</p>
+	</div>
+	<p> flexible box reversed -direction
+	<br />
+	<div id="reversebox">
+		<p id="r1">Hello</p>
+		<p id="r2">World</p>
+		<p id="r3">!</p>
+	</div>
+	<br />
+	<p> ordered box, other order than in source
+	<div class="orderbox">
+		<div class="ord2">First in source</div>
+		<div class="ord1">Second in source</div>
+		<div class="ord1">Third in source</div>
+	</div>
+	<br />
+	<div id="align">
+		align items
+	</div>
+	<div id="orient">
+		<p>Cat</p>
+		<p>Dog</p>
+		<p>Horse</p>
+	</div>
+	<br />
+	<div id="pack">
+		tekst met pack uitgelijnd.<br />
+		uitlijnen van de tekst met pack.
+	</div>
+</div>
+

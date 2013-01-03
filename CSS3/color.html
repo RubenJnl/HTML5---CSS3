@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<meta charset=utf-8>
+
+<title> CSS3 - Color </title>
+
+<link rel="stylesheet" href="../reset.css">
+<link rel="stylesheet" href="../style.css">
+
+<style type="text/css">
+	.color{
+		margin: 5px;
+		padding: 10px 5px;
+	}
+	
+	#hex{
+		background-color: #ddede3;
+	}
+	
+	#rgb{
+		background-color: rgb(213,20,10);
+	}
+	
+	#rgba{
+		background-color: rgba(213,20,10,0.7);
+	}
+	#transparent{
+		background-color: #eef ;
+	}
+	#trans1{
+		transparent: 0.2;
+	}
+	#hsl{
+		background-color: hsl(150,90%,70%);
+	}
+	#hsla{
+		background-color: hsla(150,90%,70%,0.3);
+	}
+	#opacity{
+		background-color: #eef;
+	}
+	#op1{
+		opacity: 1;
+	}
+	#op2{
+		opacity: 0.6;
+	}
+	#op3{
+		opacity: 0.3;
+	}
+</style>
+
+<div>
+	<h1>CSS3 - Color</h1>
+	
+	<div class="color" id="hex"> hex </div>
+	<div class="color" id="rgb"> rgb</div>
+	<div class="color" id="rgba"> rgba (alpha - transparency) </div>
+	<div class="color" id="hsl"> hsl </div>
+	<div class="color" id="hsla"> hsla (alpha - transparency) </div>
+	<div class="color" id="opacity"> opacity <br /> <img src="../favicon.png" alt="shapes" id="op1"><img src="../favicon.png" id="op2" alt="shapes"><img src="../favicon.png" id="op3" alt="shapes"></div>
+</div>

@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<meta charset=utf-8>
+
+<title> CSS3 - Animations </title>
+
+<link rel="stylesheet" href="../reset.css">
+<link rel="stylesheet" href="../style.css">
+
+<style type="text/css">
+.contain div{
+	width: 200px;
+	height: 100px;
+	margin: 10px;
+}
+#animation1{
+	animation:mymove 5s infinite;
+	-o-animation:mymove 5s infinite;
+	-moz-animation:mymove 5s infinite;
+	-webkit-animation:mymove 5s infinite;
+	background-color: purple;
+}
+#animation2{
+	animation:mymove 5s;
+	-o-animation:mymove 5s;
+	-moz-animation:mymove 5s;
+	-webkit-animation:mymove 5s;
+	animation-iteration-count:1;
+	-o-animation-iteration-count:1;
+	-moz-animation-iteration-count:1;
+	-webkit-animation-iteration-count:1;
+	background-color: green;
+}
+#animation3{
+	background-color: purple;
+	animation:mymoververse 5s infinite;
+	-o-animation:mymoververse 5s infinite;
+	-moz-animation:mymoververse 5s infinite;
+	-webkit-animation:mymoververse 5s infinite;
+	animation-direction:alternate;
+	-o-animation-direction:alternate;
+	-moz-animation-direction:alternate;
+	-webkit-animation-direction:alternate;
+}
+#animation4{
+	animation:mymovingcolor 5s infinite;
+	-o-animation:mymovingcolor 5s infinite;
+	-moz-animation:mymovingcolor 5s infinite;
+	-webkit-animation:mymovingcolor 5s infinite;
+}
+#animation5{
+	animation:mymove 5s infinite;
+	-o-animation:mymove 5s infinite;
+	-moz-animation:mymove 5s infinite;
+	-webkit-animation:mymove 5s infinite;
+	animation-play-state:paused;
+	-o-animation-play-state:paused;
+	-moz-animation-play-state:paused;
+	-webkit-animation-play-state:paused;
+	background-color: purple;
+	z-index: -1;
+}
+@-moz-keyframes mymove
+{
+from {left:0px;}
+to {left:200px;}
+}
+@-moz-keyframes mymoververse
+{
+0%		{left: 0px; top:0px;}
+33%		{left: 100px; top: 100px;}
+66%		{left: 300px; top: 100px;}
+100%	{left: 0px; top: 0px;}
+}
+@-moz-keyframes mymovingcolor
+{
+0%   {background:red; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
+}
+
+</style>
+
+<div class="contain">
+	<h1>CSS3 - Animations </h1>
+
+	<div id="animation1">
+		float infinite.
+	</div>
+	<div id="animation2">
+		float 1 time.
+	</div>
+	<div id="animation3">
+		move and reverse.
+	</div>
+	<div id="animation4">
+		move and change color.
+	</div>
+	<div id="animation5">
+		pauze
+	</div>
+</div>

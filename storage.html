@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<meta charset=utf-8>
+
+<title> localstorage &amp; sessionstorage </title>
+
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
+
+<script>
+	function clickCounter() {
+		if(typeof(Storage)!=="undefined"){
+			if (sessionStorage.clickcount){
+				sessionStorage.clickcount=Number(sessionStorage.clickcount)+1;
+			} else {
+				sessionStorage.clickcount=1;
+			}
+			document.getElementById("resultSession").innerHTML="Je hebt " + sessionStorage.clickcount + " keer op het knopje gedrukt.";
+		} else {
+			document.getElementById("resultLocal").innerHTML="Sorry, your browser does not support web storage...";
+		}
+	}
+</script>
+
+<script>
+	function clickCounterLocal() {
+		if(typeof(Storage)!=="undefined") {
+			if (localStorage.clickcount) {
+				localStorage.clickcount=Number(localStorage.clickcount)+1;
+			} else {
+				localStorage.clickcount=1;
+			}
+			document.getElementById("resultLocal").innerHTML="Je hebt " + localStorage.clickcount + " keer op  het knopje gedrukt.";
+		} else {
+			document.getElementById("resultLocal").innerHTML="Sorry, your browser does not support web storage...";
+		}
+	}
+</script>
+<div>
+
+	<h1> testen van  sessionstorage</h1>
+
+	<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+	<div id="resultSession"></div>
+	<p>Klik om de teller op te hogen.</p>
+	<p>Sluit het browservenster of het tab en probeer het nog een keer. De teller is nu gereset.</p>
+	<p>
+		<br />
+	</p>
+	<h1> testen van  localstorage</h1>
+	
+	<p><button onclick="clickCounterLocal()" type="button">Click me!</button></p>
+		<div id="resultLocal"></div>
+		<p>Klik om de teller op te hogen.</p>
+		<p>Sluit het browservenster of het tab en probeer het nog een keer. De teller zal verder gaan.</p>
+</div>

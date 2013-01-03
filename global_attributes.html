@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<meta charset=utf-8>
+
+<title> global attributes </title>
+
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
+
+<script type="text/javascript">
+	function allowDrop(ev) {
+		ev.preventDefault();
+	}
+
+	function drag(ev) {
+		ev.dataTransfer.setData("Text",ev.target.id);
+	}
+
+	function drop(ev) {
+		var data=ev.dataTransfer.getData("Text");
+		ev.target.appendChild(document.getElementById(data));
+		ev.preventDefault();
+	}
+</script>
+
+<div>
+	<h1> testen van global attributes</h1>
+		
+		<h2>contenteditable</h2>
+		<p contenteditable="true">
+			Awesomness, deze paragraaf is te bewerken!<br />
+			Voeg zelf je tekst toe of verwijder deze...
+		</p> 
+		<p>
+			<br />
+		</p>
+		<h2>contextmenu
+		<p contextmenu="supermenu">This paragraph has a context menu called "supermenu" attached.</p>
+		<menu id="supermenu">
+		  <command label="Step 1: Write Tutorial" onclick="doSomething()">
+		  <command label="Step 2: Edit Tutorial" onclick="doSomethingElse()">
+		</menu> 
+		
+		<h2>draggable
+		<p draggable="true" ondragstart="drag(event)" id="draggableItem">This is a draggable paragraph.</p> 
+		<p>
+			<br />
+		</p>
+		<h2>dropzone:
+		<div dropzone="move" id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"> <!-- move / link / copy -->
+			
+		</div>
+		<p>
+			<br />
+		</p>
+		<h2>hidden:
+		<p hidden="hidden">This is a hidden paragraph.</p> 
+		<p>
+			<br />
+		</p>
+		<h2>Role and aria
+		<p> voor het gebruik in webapplicaties bijvoorbeeld in combinatie met screenreaders<br />
+		Het valt onder de WIA = Web Accessibility Initiative.
+		<ul role="menubar">
+			<!-- Rule 2A: "File" label via aria-labelledby -->
+			<li role="menuitem" aria-haspopup="true" aria-labelledby="fileLabel"><span id="fileLabel">File</span>
+				<ul role="menu">
+					<!-- Rule 2C: "New" label via Namefrom:contents -->
+					<li role="menuitem" aria-haspopup="false">New</li>
+					<li role="menuitem" aria-haspopup="false">Open…</li>
+				</ul>
+		  </li>
+		</ul>
+		<p role="presentation">presentatie rol</p>
+		<div aria-hidden="true">
+			<p aria-hidden="false">twee area's eerste hidden tweede niet</p>
+		</div>
+		<p aria-hidden="true">een area hidden</p>
+		<p aria-hidden="false">een area niet hidden</p>
+		<p>
+			<br />
+		</p>
+		<h2>Spellcheck op contenteditable (Chrome &amp; Opera only)
+		<p contenteditable="true" spellcheck="true">This is a paragraph with spellcheck.</p> 
+		<p contenteditable="true" spellcheck="false">This is a paragraph without spellcheck.</p> 
+		<p>
+			<br />
+		</p>
+		<h2>Canvas Translate
+		<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+			your browser does not support the canvas tag </canvas>
+
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+			ctx.fillRect(10,10,100,50);
+			ctx.translate(70,70);
+			ctx.fillRect(10,10,100,50);
+		</script>
+</div>

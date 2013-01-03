@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+
+<title> progress </title>
+
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
+
+<div>
+	<h1> testen van &lt;progress&gt;</h1>
+
+	<section>
+	 <h2>Task Progress</h2>
+	 <p>Progress: <progress id="p" max=100><span>0</span>%</progress></p>
+	 <script>
+	  var progressBar = document.getElementById('p');
+	  function updateProgress(newValue) {
+		progressBar.value = newValue;
+		progressBar.getElementsByTagName('span')[0].textContent = newValue;
+	  }
+	 </script>
+	</section>
+	
+</div>

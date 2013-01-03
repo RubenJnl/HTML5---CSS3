@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+
+<title> video </title>
+
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
+
+<div>
+	<h1> testen van &lt;video&gt;</h1>
+	<p> Zonder controls met autoplay </p>
+		<video width="604" height="256" poster="video/happyfit2.jpg" autoplay="false" tabindex="0">
+			<source type="video/mp4" src="video/happyfit2.mp4"></source>
+			<source type="video/webm" src="video/happyfit2.webm"></source>
+			<source type="video/ogg" src="video/happyfit2.ogv"></source>
+			Your browser does not support the video tag.
+<!-- 	flash voor afvangen van oudere browsers			
+			<object width="604" height="256" style="position:relative;" data="video/flashfox.swf" type="application/x-shockwave-flash">
+				<param value="video/flashfox.swf" name="movie">
+				<param value="true" name="allowFullScreen">
+				<param value="autoplay=false&amp;controls=true&amp;loop=true&amp;src=happyfit2.mp4" name="flashVars">
+				<embed width="604" height="256" pluginspage="http://www.adobe.com/go/getflashplayer_en" type="application/x-shockwave-flash" wmode="transparent" allowfullscreen="true" flashvars="autoplay=true&amp;controls=true&amp;loop=true&amp;poster=images/happyfit2.jpg&amp;src=happyfit2.mp4" style="position:relative;" src="images/flashfox.swf">
+				<img width="604" height="256" title="Video playback is not supported by your browser" style="position:absolute;left:0;" src="video/happyfit2.jpg" alt="happyfit2">
+			</object>
+	-->		
+			</video>
+	
+		<p> met controls zonder autoplay</p>
+		<video width="604" height="256" poster="video/happyfit2.jpg" controls="controls" tabindex="0">
+			<source type="video/mp4" src="video/happyfit2.mp4"></source>
+			<source type="video/webm" src="video/happyfit2.webm"></source>
+			<source type="video/ogg" src="video/happyfit2.ogv"></source>
+			Your browser does not support the video tag.
+<!-- 	flash voor afvangen van oudere browsers		
+			<object width="604" height="256" style="position:relative;" data="video/flashfox.swf" type="application/x-shockwave-flash">
+				<param value="video/flashfox.swf" name="movie">
+				<param value="true" name="allowFullScreen">
+				<param value="autoplay=false&amp;controls=true&amp;loop=true&amp;src=happyfit2.mp4" name="flashVars">
+				<embed width="604" height="256" pluginspage="http://www.adobe.com/go/getflashplayer_en" type="application/x-shockwave-flash" wmode="transparent" allowfullscreen="true" flashvars="autoplay=true&amp;controls=true&amp;loop=true&amp;poster=images/happyfit2.jpg&amp;src=happyfit2.mp4" style="position:relative;" src="images/flashfox.swf">
+				<img width="604" height="256" title="Video playback is not supported by your browser" style="position:absolute;left:0;" src="video/happyfit2.jpg" alt="happyfit2">
+			</object>
+	-->		
+			</video>
+</div>

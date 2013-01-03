@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<meta charset=utf-8>
+
+<title> CSS3 - namespace </title>
+
+<link rel="stylesheet" href="../reset.css">
+<link rel="stylesheet" href="../style.css">
+
+<style type="text/css">
+	@namespace "http://test.jdi.nl/ruben/Testen/CSS/ns1/";
+@namespace product "http://test.jdi.nl/ruben/Testen/ns2/";
+@namespace client "http://test.jdi.nl/ruben/Testen/ns3/";
+
+Order {
+  display: block;
+  background-color: silver;
+}
+
+Order product|Product,
+Order client|Client{
+  display: block;
+  border: thick solid green;
+}
+
+
+product|Code,
+product|Price {
+  font-weight: bold;
+  color: green;
+}
+
+client|Code,
+client|Name,
+client|Address {
+  font-style: italic;
+  color: blue;
+}
+</style>
+
+<div>
+	<h1>CSS3 - namespace </h1>
+	<Order xmlns="http://test.jdi.nl/ruben/Testen/ns1"
+	xmlns:product="http://test.jdi.nl/ruben/Testen/ns2"
+	xmlns:client="http://test.jdi.nl/ruben/Testen/ns3">
+
+  <product:Product>
+
+     <product:Code>This should be green, bold, and with a thick green border.</product:Code>
+     <product:Price>Foo</product:Price>
+
+  </product:Product>
+  
+  <client:Client>
+
+    <client:Code>This should be blue, italic, and with a thick green border.</client:Code>
+    <client:Name>Foo</client:Name>
+    <client:Address>Baz</client:Address>
+
+  </client:Client>
+  
+  <info>This document should have a silver background.</info>
+
+</Order>
+	
+</div>

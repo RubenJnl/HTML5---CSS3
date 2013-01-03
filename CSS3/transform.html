@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<meta charset=utf-8>
+
+<title> CSS3 - Transform </title>
+
+<link rel="stylesheet" href="../reset.css">
+<link rel="stylesheet" href="../style.css">
+
+<style type="text/css">
+.contain div{
+	width: 200px;
+	height: 100px;
+	margin: 10px;
+}
+#trans0{
+	background-color:darkblue;
+	color: white;
+	transform:matrix(0.9,0.2,-0.2,0.9,0,0);
+	-o-transform:matrix(0.9,0.2,-0.2,0.9,0,0);
+	-moz-transform:matrix(0.9,0.2,-0.2,0.9,0,0);
+	-webkit-transform:matrix(0.9,0.2,-0.2,0.9,0,0);
+}
+#trans1{
+	background-color:darkblue;
+	color: white;
+	transform:3dmatrix(0.9,0.2,-0.2,0.9,0,0,0.9,0.2,-0.2,0.9,0,0);
+	-o-transform:3dmatrix(0.9,0.2,-0.2,0.9,0,0,0.9,0.2,-0.2,0.9,0,0);
+	-moz-transform:3dmatrix(0.9,0.2,-0.2,0.9,0,0,0.9,0.2,-0.2,0.9,0,0);
+	-webkit-transform:3dmatrix(0.9,0.2,-0.2,0.9,0,0,0.9,0.2,-0.2,0.9,0,0);
+}
+#trans2{
+	background-color:darkblue;
+	color: white;
+	transform:translate(20px,20px);
+	-o-transform:translate(20px,20px);
+	-moz-transform:translate(20px,20px);
+	-webkit-transform:translate(20px,20px);
+}
+#trans3{
+	background-color:darkblue;
+	color: white;
+	transform:translateX(25px);
+	-o-transform:translateX(25px);
+	-moz-transform:translateX(25px);
+	-webkit-transform:translateX(25px);
+}
+#trans4{
+	background-color:darkblue;
+	color: white;
+	transform:translateZ(25px);
+	-o-transform:translateZ(25px);
+	-moz-transform:translateZ(25px);
+	-webkit-transform:translateZ(25px);
+}
+#trans5{
+	background-color:darkblue;
+	color: white;
+	transform:scale(1.2,1.5);
+	-o-transform:scale(1.2,1.5);
+	-moz-transform:scale(1.2,1.5);
+	-webkit-transform:scale(1.2,1.5);
+}
+#trans6{
+	background-color:darkblue;
+	color: white;
+	transform:rotate(12deg);
+	-o-transform:rotate(12deg);
+	-moz-transform:rotate(12deg);
+	-webkit-transform:rotate(12deg);
+}
+#trans7{
+	background-color:darkblue;
+	color: white;
+	transform:rotateX(12deg);
+	-o-transform:rotateX(12deg);
+	-moz-transform:rotateX(12deg);
+	-webkit-transform:rotateX(12deg);
+}
+#trans8{
+	background-color:darkblue;
+	color: white;
+	transform:rotateY(-12deg);
+	-o-transform:rotateY(-12deg);
+	-moz-transform:rotateY(-12deg);
+	-webkit-transform:rotateY(-12deg);
+}
+#trans9{
+	background-color:darkblue;
+	color: white;
+	transform:rotateZ(12deg);
+	-o-transform:rotateZ(12deg);
+	-moz-transform:rotateZ(12deg);
+	-webkit-transform:rotateZ(12deg);
+}
+#trans10{
+	background-color:darkblue;
+	color: white;
+	transform:skew(10deg,10deg);
+	-o-transform:skew(10deg,10deg);
+	-moz-transform:skew(10deg,10deg);
+	-webkit-transform:skew(10deg,10deg);
+}
+#trans11{
+	background-color:darkblue;
+	color: white;
+	transform:skewX(10deg);
+	-o-transform:skewX(10deg);
+	-moz-transform:skewX(10deg);
+	-webkit-transform:skewX(10deg);
+}
+#trans12{
+	background-color:darkblue;
+	color: white;
+	transform:skewY(10deg);
+	-o-transform:skewY(10deg);
+	-moz-transform:skewY(10deg);
+	-webkit-transform:skewY(10deg);
+}
+#trans13{
+	background-color:darkblue;
+	color: white;
+	transform: perspective(400px) rotateY(45deg);
+	-o-transform: perspective(400px) rotateY(45deg);
+	-moz-transform: perspective(400px) rotateY(45deg);
+	-webkit-transform: perspective(400px) rotateY(45deg);
+}
+#trans14{
+	background-color:darkblue;
+	color: white;
+	perspective-origin: 23% 15%;
+	-o-perspective-origin: 23% 15%;
+	-moz-perspective-origin: 23% 15%;
+	-webkit-perspective-origin: 23% 15%;
+}
+</style>
+
+<div class="contain">
+	<h1>CSS3 - Transform </h1>
+	<div id="trans0">
+		Single transformation in matrix
+	</div>
+	
+	<div id="trans1">
+		3D transformation in matrix <br />
+		*standard not ready yet
+	</div>
+	
+	<div id="trans2">
+		transformation trough Translate
+	</div>
+	<div id="trans3">
+		transformation trough Translate X (could also be Y)
+	</div>
+	<div id="trans4">
+		transformation trough Translate Z <br />
+		*standard not ready yet
+	</div>
+	<div id="trans5">
+		Scale
+	</div>
+	<div id="trans6">
+		Rotate
+	</div>
+	<div id="trans7">
+		Rotate x
+	</div>
+	<div id="trans8">
+		Rotate y
+	</div>
+	<div id="trans9">
+		Rotate z
+	</div>
+	<div id="trans10">
+		Scew
+	</div>
+	<div id="trans11">
+		Scew X
+	</div>
+	<div id="trans12">
+		Scew Y
+	</div>
+	<div id="trans13">
+		Perspective
+	</div>
+	<div id="trans14">
+		Perspective origin
+	</div>
+</div>

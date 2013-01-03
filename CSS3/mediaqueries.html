@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<meta charset=utf-8>
+
+<title> CSS3 -  mediaqueries </title>
+
+<link rel="stylesheet" href="../reset.css">
+<link rel="stylesheet" href="../style.css">
+
+<style type="text/css">
+	.voorbeeld{
+		width: 100px;
+		height: 200px; 
+		background:
+	}
+	@media screen and (max-width: 600px){
+		.voorbeeld{
+			background: red;
+			width: 500px;
+		}
+		p{
+			color: green;
+		}
+	}
+	@media screen and (min-width: 600px) and (max-width: 1000px) {
+		.voorbeeld {
+			background: green;
+			width: 600px;
+		}
+		p{
+			color: blue;
+		}
+	}
+	@media screen and (min-width: 1000px) and (max-width: 2000px) {
+		.voorbeeld {
+			background: blue;
+			width: 1000px;
+		}
+		p{
+			color: red;
+		}
+	}
+</style>
+<!-- <link rel="stylesheet" media="screen and (max-width: 600px)" href="small.css" /> -->
+
+<div>
+	<h1>CSS3 - mediaqueries </h1>
+	
+	<div class="voorbeeld">
+		<p> voorbeeld div </p>
+	</div>
+	
+</div>

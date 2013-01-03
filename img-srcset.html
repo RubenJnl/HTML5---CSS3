@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<meta charset=utf-8>
+
+<title> img srcset &amp; picture </title>
+
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
+
+
+
+<div>
+	<h1> testen van &lt;img srcset&gt; &amp; &lt;picture&gt;</h1>
+	
+	<img src="image/keltfest-320.jpg"
+	srcset="image/keltfest-320@1.jpg 1x,
+				 image/keltfest-800@2.jpg 2x,
+			     image/keltfest-2048@6.jpg 6x" alt="different sizes for this image" />
+				 
+	<picture alt="Different sizes for this image source" >
+		<source src="image/keltfest-320.jpg" />
+		<source src="image/keltfest-800.jpg" media="min-width: 800px"/>
+		<source src="image/keltfest-2048.jpg" media="min-width: 900px"/>
+	</picture>
+	
+	<h1><img alt="The Breakfast Combo"
+         src="image/keltfest-320.jpg"
+         srcset="image/keltfest-800.jpg 2x, image/keltfest-320.jpg 100w, image/keltfest-2048.jpg 100w 2x" /></h1>
+	<p>
+</div>

@@ -1,0 +1,109 @@
+
+h1{
+	font-size: 20px;
+	margin: 5px;
+}
+
+h2{
+	font-size: 18px;
+	margin: 5px;
+}
+
+p{
+	font-size: 13px;
+	margin: 10px 3px 3px 3px;
+}
+
+
+
+/* aside */
+aside{
+	margin: 10px;
+	font-size: 10px;
+}
+/* end aside */
+
+/* footer */
+footer{
+	bottom: 0px;
+	position: fixed!important;
+	background: #fee414;
+}
+
+footer p{
+	font-family: Tahoma;
+}
+/* end footer */
+
+/* navigatie */
+nav{
+
+}
+
+li{
+	float: left;
+	margin-left: 20px;
+}
+/* end navigatie */
+
+/* figure */
+figcaption{
+	margin-top: 0;
+	margin-left: 20px;
+	font-size: 13px;
+}
+/* end figure */
+
+/* audio */
+audio{
+	margin-left: 50px;
+}
+/* end audio */
+
+/* time */
+time{
+	color: darkgreen;
+	margin-left: 20px;
+}
+/* end time*/
+/* table */
+thead{
+font-weight:bold;
+}
+tbody{
+text-decoration: underline;
+}
+tfoot{
+font-style:italic;
+}
+/* end table */
+/* ol */
+ol{
+	list-style-type: decimal;
+}
+li{
+	margin: 1em 1em 1em 2em;
+}
+/* end ol */
+/* iframe */
+iframe{
+	width: 500px;
+	height: 200px;
+	overflow: hidden;
+}
+/* end iframe*/
+/* dropzone */
+#dropzone{
+	background-color: #dfdfdd;
+	width: 400px;
+	height: 100px;
+}
+/* end dropzone */
+/* div element */
+div.element{
+	width: 400px;
+	margin: 10px;
+}
+/* end div element */
+/* */
+/* */

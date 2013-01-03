@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<meta charset=utf-8>
+
+<title> CSS3 -  </title>
+
+<link rel="stylesheet" href="../reset.css">
+<link rel="stylesheet" href="../style.css">
+
+<style type="text/css">
+	/* selector subelement */
+	ul~p{color: red;}
+	p{color: blue;}
+	li{color:green;}
+	
+	/* link selectors */
+	a[href^="https"]{
+		color: red;
+		mark: ;
+	}
+	a[href$=".png"]{
+		color: purple;
+		text-decoration: none;
+	}
+	a[href*="css"]{
+		color: orange;
+	}
+	
+	div.childselectors p{ float: left}
+	/* type selectors */
+	p{ /* reset p color */
+		color: #000;
+	}
+	p:first-of-type{
+		color: orange;
+	}
+	p:last-of-type{
+		color: blue;
+	}
+	p:nth-child(4){
+		color: purple;
+	}
+	p:nth-last-child(4){
+		color: purple;
+	}
+	p:nth-of-type(2){
+		color: lime;
+	}
+	p:nth-last-of-type(2){
+		color: Silver;
+	}
+	p:last-child{
+		color: navy;
+	}
+	p:only-child{
+		color: green;
+	}
+	/* other new selectors */
+	:root{
+		background: mistyrose;
+	}
+	#leeg{width: 20px; height: 10px;}
+	p:empty{
+		border: 1px solid purple;
+	}
+	
+	/* anchor */
+	:target:before {
+		content: url(../favicon.png); 
+	}
+	
+	/* input */
+	input[type="text"]:enabled {
+		background: green;
+	} 
+	input[type="text"]:disabled {
+		background: purple;
+	}
+	input:enabled {
+		background: yellow;
+	} 
+	input:checked{
+		background: purple;
+	}
+	
+	:not(p) {
+		background: rgba(200,200,10,0.2);
+	} 
+	
+	::selection	{
+		color: purple;
+	}
+	::-moz-selection {
+		color: purple;
+	} 
+</style>
+
+<div>
+	<h1>CSS3 - </h1>
+	<div class="element">
+		<h2> Selectors el1~el2 </h2>
+		<ul>
+			<li><p>list item with paragraph</p></li>
+			<li> list item without paragraph</li>
+		</ul>
+		<br />
+		<br />
+		<br />
+		<p> first paragraph after the unordered list </p>
+	</div>
+	<div class="element">
+		<h2> link selectors  </h2>
+		<a href="http://linkje.nu">gewoon linkje</a><br /><br />
+		<a href="https://linkje.nu">linkje dat begint met https</a><br /><br />
+		<a href="http://linkje.nu/plaatje.png">linkje met png aan het einde</a><br /><br />
+		<a href="http://linkje.nu/css/blaat">linkje dat "css" bevat</a><br /><br />
+	</div>
+	<div class="element childselectors">
+		<h2> type </h2>
+		<p> twee </p>
+		<p> drie </p>
+		<p> vier </p>
+		<p> vijf </p>
+		<p id="leeg"><p>
+		<p> zes </p>
+		<p> zeven </p>
+		<p> acht </p>
+		<div><p> only child </p></div>
+		<p> negen </p>
+		<br />
+		<br />
+	</div>
+	<div class="element">
+		<a href="#nolinkhere">nolinkhere link</a>
+		<a href="#nolinkhere1">nolinkhere1 link</a>
+		<br />
+		<a name="nolinkhere"><a>nolinkhere anchor <br />
+		<a name="nolinkhere1"><a>nolinkhere1 anchor
+	</div>
+	<br />
+	<div class="element">
+		<form action="">
+			<input type="text" value="enabled veld"> </input> <br />
+			<input type="text" disabled="disabled" value="disabled veld"> </input> <br />
+			<input type="radio" value="male" name="gender" /> Male *only works in Opera<br />
+			<input type="radio" value="female" name="gender" /> Female *only works in Opera<br />
+			<input type="checkbox" value="Bike" /> I have a bike *only works in Opera<br />
+			<input type="checkbox" value="Car" /> I have a car *only works in Opera<br />
+		</form>
+	</div>
+	<div class="element">
+		
+	</div>
+</div>

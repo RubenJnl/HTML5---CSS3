@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+
+<title> command </title>
+
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
+
+<div>
+	<h1> testen van &lt;command&gt;</h1>
+
+	<menu type="toolbar">
+	 <command type="radio" radiogroup="alignment" checked="checked"
+			  label="Left" icon="shapes.png" onclick="setAlign('left')">
+	 <command type="radio" radiogroup="alignment"
+			  label="Center" icon="shapes.png" onclick="setAlign('center')">
+	 <command type="radio" radiogroup="alignment"
+			  label="Right" icon="shapes.png" onclick="setAlign('right')">
+	 <hr>
+	 <command type="command" disabled
+			  label="Publish" icon="shapes.png" onclick="publish()">
+	</menu>
+	
+</div>

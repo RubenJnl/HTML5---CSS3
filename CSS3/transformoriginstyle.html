@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<meta charset=utf-8>
+
+<title> CSS3 - Transform origin &amp; style </title>
+
+<link rel="stylesheet" href="../reset.css">
+<link rel="stylesheet" href="../style.css">
+
+<style type="text/css">
+.contain div{
+	width: 200px;
+	height: 100px;
+	margin: 10px;
+}
+#transorigin{
+	background-color: lightblue;
+	transform: rotate(45deg);
+	transform-origin:20% 40%;
+	-moz-transform: rotate(45deg); 
+	-moz-transform-origin:20% 40%; 
+}
+#transstyle{
+	background-color: lightblue;
+	transform: rotateY(30deg);
+	transform-style: preserve-3d;
+	-webkit-transform: rotateY(30deg); 
+	-webkit-transform-style: preserve-3d;
+}		
+
+.container {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin: 0 auto 40px;
+      border: 1px solid #CCC;
+    }
+
+    #cube {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-transform: translateZ( -100px );
+         -moz-transform: translateZ( -100px );
+           -o-transform: translateZ( -100px );
+              transform: translateZ( -100px );
+    }
+
+    #cube.spinning {
+      -webkit-animation: spinCubeWebkit 8s infinite ease-in-out;
+         -moz-animation: spinCubeMoz    8s infinite ease-in-out;
+           -o-animation: spinCubeO      8s infinite ease-in-out;
+              animation: spinCube       8s infinite ease-in-out;
+    }
+
+    @-webkit-keyframes spinCubeWebkit {
+        0% { -webkit-transform: translateZ( -100px ) rotateX(   0deg ) rotateY(   0deg ); }
+      100% { -webkit-transform: translateZ( -100px ) rotateX( 360deg ) rotateY( 360deg ); }
+    }
+
+    @-moz-keyframes spinCubeMoz {
+        0% { -moz-transform: translateZ( -100px ) rotateX(   0deg ) rotateY(   0deg ); }
+      100% { -moz-transform: translateZ( -100px ) rotateX( 360deg ) rotateY( 360deg ); }
+    }
+
+    #cube figure {
+      display: block;
+      position: absolute;
+      width: 196px;
+      height: 196px;
+      border: 2px solid black;
+      line-height: 196px;
+      font-size: 120px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+    }
+	
+	#cube figure {
+      -webkit-backface-visibility: visible;
+         -moz-backface-visibility: visible;
+           -o-backface-visibility: visible;
+              backface-visibility: visible;
+    }
+
+
+    #cube .front  { background: hsla(   0, 100%, 50%, 0.7 ); }
+    #cube .back   { background: hsla(  60, 100%, 50%, 0.7 ); }
+    #cube .right  { background: hsla( 120, 100%, 50%, 0.7 ); }
+    #cube .left   { background: hsla( 180, 100%, 50%, 0.7 ); }
+    #cube .top    { background: hsla( 240, 100%, 50%, 0.7 ); }
+    #cube .bottom { background: hsla( 300, 100%, 50%, 0.7 ); }
+
+	/* plaatsen van de zijden in een kubus */
+    #cube .front  {
+      -webkit-transform: translateZ( 100px );
+         -moz-transform: translateZ( 100px );
+           -o-transform: translateZ( 100px );
+              transform: translateZ( 100px );
+    }
+    #cube .back {
+      -webkit-transform: rotateX( -180deg ) translateZ( 100px );
+         -moz-transform: rotateX( -180deg ) translateZ( 100px );
+           -o-transform: rotateX( -180deg ) translateZ( 100px );
+              transform: rotateX( -180deg ) translateZ( 100px );
+    }
+    #cube .right {
+      -webkit-transform: rotateY(   90deg ) translateZ( 100px );
+         -moz-transform: rotateY(   90deg ) translateZ( 100px );
+           -o-transform: rotateY(   90deg ) translateZ( 100px );
+              transform: rotateY(   90deg ) translateZ( 100px );
+    }
+    #cube .left {
+      -webkit-transform: rotateY(  -90deg ) translateZ( 100px );
+         -moz-transform: rotateY(  -90deg ) translateZ( 100px );
+           -o-transform: rotateY(  -90deg ) translateZ( 100px );
+              transform: rotateY(  -90deg ) translateZ( 100px );
+    }
+    #cube .top {
+      -webkit-transform: rotateX(   90deg ) translateZ( 100px );
+         -moz-transform: rotateX(   90deg ) translateZ( 100px );
+           -o-transform: rotateX(   90deg ) translateZ( 100px );
+              transform: rotateX(   90deg ) translateZ( 100px );
+    }
+    #cube .bottom {
+      -webkit-transform: rotateX(  -90deg ) translateZ( 100px );
+         -moz-transform: rotateX(  -90deg ) translateZ( 100px );
+           -o-transform: rotateX(  -90deg ) translateZ( 100px );
+              transform: rotateX(  -90deg ) translateZ( 100px );
+    }
+</style>
+
+<div class="contain">
+	<h1>CSS3 - Transform origin &amp; style </h1>
+	
+	<div id="transorigin">
+		transform origin
+	</div>
+	
+	<div id="transstyle">
+		transform style <br />
+		* webkit, safari - chrome only
+	</div>
+
+	<section class="container">
+		<div id="cube" class="spinning">
+			<figure class="front">1</figure>
+			<figure class="back">2</figure>
+			<figure class="right">3</figure>
+			<figure class="left">4</figure>
+			<figure class="top">5</figure>
+			<figure class="bottom">6</figure>
+		</div>
+	</section>
+</div>
